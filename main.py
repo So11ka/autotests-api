@@ -1,16 +1,10 @@
-# This is a sample Python script.
+import httpx
 
-# Press Ctrl+Enter to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+payload = {
+  "email": "user34@example.com",
+  "password": "qwer1234"
+}
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+response1 = httpx.post('http://localhost:8000/api/v1/authentication/login', json=payload, timeout=10)
+response2 = httpx.post('http://localhost:8000/api/v1/authentication/refresh', json={'refreshToken': response1.json()['token']['refreshToken']}, timeout=10)
+print(response2.json())
