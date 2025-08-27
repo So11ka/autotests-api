@@ -26,6 +26,4 @@ with httpx.Client(base_url='http://localhost:8000/api/v1', timeout=10) as client
     }
 
     patch_user_response = client.patch(f'/users/{user_id}', headers=header_token, json=patch_user_payload)
-
-    get_user_response = client.get(f'/users/{user_id}', headers=header_token)
-    print(f'Стало: {get_user_response.json()}')
+    print(f'Стало: {patch_user_response.json()}')
