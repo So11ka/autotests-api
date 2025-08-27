@@ -14,5 +14,3 @@ def random_surname() -> str:
 def random_password(len_pass=12) -> str:
     result = string.ascii_letters + string.digits
     return ''.join(rnd.choices(result, k=len_pass))
-
-print(random_password())
