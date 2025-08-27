@@ -16,4 +16,3 @@ class AuthenticationClient(APIClient):
 
     def refresh_api(self, request: RefreshRequestDict) -> Response:
         return self.post('localhost:8000/api/v1/authentication/refresh', json=request)
-
