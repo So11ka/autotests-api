@@ -3,8 +3,8 @@ from typing import Any
 from httpx._types import RequestData, RequestFiles
 
 class APIClient:
-    def __init__(self, client: Client):
-        self.client = client
+    def __init__(self, client: Client=None):
+        self.client = Client(timeout=10, base_url='http://localhost:8000') if client is None else client
 
     def get(self, url: str | URL, params: QueryParams | None = None) -> Response:
         return self.client.get(url, params=params)
