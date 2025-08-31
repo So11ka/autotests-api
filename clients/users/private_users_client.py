@@ -69,8 +69,7 @@ class PrivateUsersClient(APIClient):
         return self.delete(f'/api/v1/users/{user_id}')
 
     def get_user(self, user_id: str=None) -> UserResponseDict:
-
-        response = self.get('/api/v1/users/me') if id is None else self.get(f'/api/v1/users/{user_id}')
+        response = self.get_user_me_api() if user_id is None else self.get_user_api(user_id)
         return response.json()
 
     @classmethod

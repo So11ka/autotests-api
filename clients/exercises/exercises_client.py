@@ -9,6 +9,31 @@ class GetExercisesQueryDict(TypedDict):
     """
     courseId: str
 
+class Exercise(TypedDict):
+    """
+    Описание структуры упражнения.
+    """
+    id: str
+    title: str
+    courseId: str
+    maxScore: int
+    minScore: int
+    orderIndex: int
+    description: str
+    estimatedTime: str
+
+class GetExercisesResponseDict(TypedDict):
+    """
+    Описание структуры ответа получения списка упражнений.
+    """
+    exercises: list[Exercise]
+
+class GetExerciseResponseDict(TypedDict):
+    """
+    Описание структуры ответа создания/получения/изменения упражнения.
+    """
+    exercise: Exercise
+
 class CreateExercisesRequestDict(TypedDict):
     """
     Описание структуры запроса на создание упражнения.
@@ -82,6 +107,47 @@ class ExercisesClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.delete(f"/api/v1/exercises/{exercise_id}")
+
+    def get_exercises(self, query: GetExercisesQueryDict) -> GetExercisesResponseDict:
+        """
+        Метод получения списка упражнений с помощью метода get_exercises_api.
+
+        :param query: Словарь с courseId.
+        :return: Словарь с id, title, courseId, maxScore, minScore, orderIndex, description, estimatedTime.
+        """
+        response = self.get_exercises_api(query)
+        return response.json()
+
+    def get_exercise(self, exercise_id: str) -> GetExerciseResponseDict:
+        """
+        Метод получения упраженения с помощью метода get_exercise_api.
+
+        :param exercise_id: Идентификатор упражнения.
+        :return: Словарь с id, title, courseId, maxScore, minScore, orderIndex, description, estimatedTime.
+        """
+        response = self.get_exercise_api(exercise_id)
+        return response.json()
+
+    def create_exercise(self, request: CreateExercisesRequestDict) -> GetExerciseResponseDict:
+        """
+        Метод создания упраженения с помощью метода create_exercise_api.
+
+        :param request: Словарь с title, courseId, maxScore, minScore, orderIndex, description, estimatedTime.
+        :return: Словарь с id, title, courseId, maxScore, minScore, orderIndex, description, estimatedTime.
+        """
+        response = self.create_exercise_api(request)
+        return response.json()
+
+    def update_exercise(self, exercise_id: str, request: UpdateExercisesRequestDict) -> GetExerciseResponseDict:
+        """
+        Метод изменения упражнения с помощью метода update_exercise_api.
+
+        :param exercise_id: Идентификатор упражнения.
+        :param request: Словарь с title, maxScore, minScore, orderIndex, description, estimatedTime.
+        :return: Словарь с id, title, courseId, maxScore, minScore, orderIndex, description, estimatedTime.
+        """
+        response = self.update_exercise_api(exercise_id, request)
+        return response.json()
 
     @classmethod
     def get_private_client(cls, data: AuthenticationRequestDict) -> 'ExercisesClient':
