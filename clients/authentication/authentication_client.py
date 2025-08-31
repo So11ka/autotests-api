@@ -4,10 +4,16 @@ from typing import TypedDict
 from clients.public_http_builder import get_public_http_client
 
 class LoginRequestDict(TypedDict):
+    """
+    Описание структуры запроса на автризацию пользователя
+    """
     email: str
     password: str
 
 class RefreshRequestDict(TypedDict):
+    """
+    Описание структуры запроса на реавтризацию пользователя
+    """
     refreshToken: str
 
 class AuthenticationClient(APIClient):
@@ -34,5 +40,5 @@ class AuthenticationClient(APIClient):
         return self.post("/api/v1/authentication/refresh", json=request)
 
     @classmethod
-    def get_public_client(cls, timeout: int | float) -> 'AuthenticationClient':
+    def get_public_client(cls, timeout: int | float=10) -> 'AuthenticationClient':
         return cls(get_public_http_client(timeout))

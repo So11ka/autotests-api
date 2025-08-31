@@ -12,6 +12,22 @@ class UpdateUserRequestDict(TypedDict, total=False):
     firstName: str
     middleName: str
 
+class User(TypedDict):
+    """
+    Описание структуры пользователя
+    """
+    id: str
+    email: str
+    lastName: str
+    firstName: str
+    middleName: str
+
+class UserResponseDict(TypedDict):
+    """
+    Описание структуры ответа оздания пользователя
+    """
+    user: User
+
 class PrivateUsersClient(APIClient):
     """
     Клиент для работы с /api/v1/users
@@ -52,8 +68,13 @@ class PrivateUsersClient(APIClient):
         """
         return self.delete(f'/api/v1/users/{user_id}')
 
+    def get_user(self, user_id: str=None) -> UserResponseDict:
+
+        response = self.get('/api/v1/users/me') if id is None else self.get(f'/api/v1/users/{user_id}')
+        return response.json()
+
     @classmethod
-    def get_private_http_client(cls, data: AuthenticationRequestDict) -> 'PrivateUsersClient':
+    def get_private_client(cls, data: AuthenticationRequestDict) -> 'PrivateUsersClient':
         return cls(client=get_private_http_client(data))
 
 
