@@ -1,6 +1,7 @@
-from httpx import Response, Client
+from httpx import Response
 from typing import TypedDict
 from clients.api_client import APIClient
+from clients.public_http_builder import get_public_http_client
 
 class UserRequestDict(TypedDict, total=True):
     email: str
@@ -21,3 +22,7 @@ class PublicUsersClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.post('http://localhost:8000/api/v1/users', json=request)
+
+    @classmethod
+    def get_public_client(cls, timeout: int | float) -> 'PublicUsersClient':
+        return cls(get_public_http_client(timeout))

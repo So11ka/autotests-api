@@ -84,5 +84,5 @@ class ExercisesClient(APIClient):
         return self.delete(f"/api/v1/exercises/{exercise_id}")
 
     @classmethod
-    def get_private_http_client(cls, data: AuthenticationRequestDict) -> 'ExercisesClient':
+    def get_private_client(cls, data: AuthenticationRequestDict) -> 'ExercisesClient':
         return cls(client=get_private_http_client(data))

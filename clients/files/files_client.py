@@ -50,5 +50,5 @@ class FilesClient(APIClient):
         return self.delete(f"/api/v1/files/{file_id}")
 
     @classmethod
-    def get_private_http_client(cls, data: AuthenticationRequestDict) -> 'FilesClient':
+    def get_private_client(cls, data: AuthenticationRequestDict) -> 'FilesClient':
         return cls(client=get_private_http_client(data))
