@@ -2,7 +2,7 @@ from httpx import Client
 
 def get_public_http_client(timeout: int | float) -> Client:
     """
-    Метод для возврата не авторизованного пользователя
+    Метод для возврата не клиента
 
     :param timeout: Количество времени отведенного на запрос
     :return: Ответ от сервера в виде объекта httpx.Client

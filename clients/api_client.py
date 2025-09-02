@@ -1,12 +1,12 @@
 from httpx import Client, URL, Response, QueryParams
-from typing import Any
+from typing import Any, Optional
 from httpx._types import RequestData, RequestFiles
 
 class APIClient:
     def __init__(self, client: Client):
         self.client = client
 
-    def get(self, url: str | URL, params: QueryParams | None = None) -> Response:
+    def get(self, url: str | URL, params: Optional[QueryParams] = None) -> Response:
         return self.client.get(url, params=params)
 
     def post(self, url: str | URL, json: Any | None = None, data: RequestData | None = None, files: RequestFiles | None = None) -> Response:

@@ -1,7 +1,7 @@
 from typing import TypedDict
 from httpx import Response
 from clients.api_client import APIClient
-from clients.private_http_builder import get_private_http_client, AuthenticationRequestDict
+from clients.private_http_builder import get_private_http_client, AuthenticationRequestSchema
 
 class GetExercisesQueryDict(TypedDict):
     """
@@ -150,5 +150,5 @@ class ExercisesClient(APIClient):
         return response.json()
 
     @classmethod
-    def get_private_client(cls, data: AuthenticationRequestDict) -> 'ExercisesClient':
+    def get_private_client(cls, data: AuthenticationRequestSchema) -> 'ExercisesClient':
         return cls(client=get_private_http_client(data))

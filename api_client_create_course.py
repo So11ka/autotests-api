@@ -1,6 +1,6 @@
 from clients.courses.courses_client import CoursesClient, CreateCourseRequestDict
 from clients.files.files_client import FilesClient, CreateFileRequestDict
-from clients.private_http_builder import AuthenticationRequestDict
+from clients.private_http_builder import AuthenticationRequestSchema
 from clients.users.public_users_client import PublicUsersClient, CreateUserRequestDict
 from tools import fakers
 
@@ -14,7 +14,7 @@ create_user_request = CreateUserRequestDict(
     middleName = fakers.random_surname()
 )
 create_user_response = public_user_client.create_user(create_user_request)
-authentication_client = AuthenticationRequestDict(
+authentication_client = AuthenticationRequestSchema(
     email = create_user_request['email'],
     password = create_user_request['password'],
 )
