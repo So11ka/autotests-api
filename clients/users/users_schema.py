@@ -1,5 +1,5 @@
 from pydantic import Field, EmailStr
-from clients.authentication.authentication_schema import BaseSchema
+from clients.config_schema import BaseSchema
 from typing import Optional
 
 class UserSchema(BaseSchema):

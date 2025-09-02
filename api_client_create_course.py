@@ -1,43 +1,46 @@
-from clients.courses.courses_client import CoursesClient, CreateCourseRequestDict
-from clients.files.files_client import FilesClient, CreateFileRequestDict
+from clients.courses.courses_client import CoursesClient
+from clients.courses.courses_schema import CreateCourseRequestSchema
+from clients.files.files_client import FilesClient
+from clients.files.files_schema import CreateFileRequestSchema
 from clients.private_http_builder import AuthenticationRequestSchema
-from clients.users.public_users_client import PublicUsersClient, CreateUserRequestDict
+from clients.users.public_users_client import PublicUsersClient
+from clients.users.users_schema import CreateUserRequestSchema
 from tools import fakers
 
 #--Создание пользователя--
 public_user_client = PublicUsersClient.get_public_client()
-create_user_request = CreateUserRequestDict(
+create_user_request = CreateUserRequestSchema(
     email = fakers.random_email(),
     password = fakers.random_password(),
-    lastName = 'None',
-    firstName = fakers.random_name(),
-    middleName = fakers.random_surname()
+    last_name = 'None',
+    first_name = fakers.random_name(),
+    middle_name = fakers.random_surname()
 )
 create_user_response = public_user_client.create_user(create_user_request)
 authentication_client = AuthenticationRequestSchema(
-    email = create_user_request['email'],
-    password = create_user_request['password'],
+    email = create_user_request.email,
+    password = create_user_request.password,
 )
 
 #--Создание файла--
 files_client = FilesClient.get_private_client(authentication_client)
-create_file_request = CreateFileRequestDict(
+create_file_request = CreateFileRequestSchema(
     filename = 'image.png',
     directory = 'courses',
-    upload_file= './testdata/files/image2.png',
+    upload_file= './testdata/files/image.png',
 )
 create_file_response = files_client.create_file(create_file_request)
 
 #--Создание курса--
 courses_client = CoursesClient.get_private_client(authentication_client)
-create_course_request = CreateCourseRequestDict(
+create_course_request = CreateCourseRequestSchema(
     title = 'Python',
-    maxScore = 100,
-    minScore = 10,
+    max_score = 100,
+    min_score = 10,
     description = 'Python API course',
-    estimatedTime = '2 weeks',
-    previewFileId = create_file_response['file']['id'],
-    createdByUserId = create_user_response['user']['id']
+    estimated_time = '2 weeks',
+    preview_file_id = create_file_response.file.id,
+    created_by_user_id = create_user_response.user.id
 )
 create_course_response = courses_client.create_course(create_course_request)
-print(create_course_response)
+print(create_course_response.model_dump_json(by_alias=True, indent=2))
