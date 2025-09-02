@@ -1,16 +1,16 @@
 from pydantic import Field
-from clients.config_schema import BaseSchema
+from clients.config_schema import BaseCamelSchema, BaseSchema
 from clients.users.users_schema import UserSchema
 from clients.files.files_schema import FileSchema
 from typing import Optional
 
-class GetCoursesQuerySchema(BaseSchema):
+class GetCoursesQuerySchema(BaseCamelSchema):
     """
     Описание структуры запроса на получение списка курсов.
     """
-    userId: str
+    user_id: str
 
-class CourseSchema(BaseSchema):
+class CourseSchema(BaseCamelSchema):
     """
     Описание структруры данных курса
     """
@@ -29,7 +29,7 @@ class CoursesResponseSchema(BaseSchema):
     """
     course: CourseSchema
 
-class CreateCourseRequestSchema(BaseSchema):
+class CreateCourseRequestSchema(BaseCamelSchema):
     """
     Описание структуры запроса на создание курса.
     """
@@ -42,7 +42,7 @@ class CreateCourseRequestSchema(BaseSchema):
     created_by_user_id: str
 
 
-class UpdateCourseRequestSchema(BaseSchema):
+class UpdateCourseRequestSchema(BaseCamelSchema):
     """
     Описание структуры запроса на обновление курса.
     """

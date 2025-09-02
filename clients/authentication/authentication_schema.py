@@ -1,7 +1,6 @@
-from clients.config_schema import BaseSchema
-from pydantic import BaseModel
+from clients.config_schema import BaseCamelSchema, BaseSchema
 
-class TokenSchema(BaseSchema):
+class TokenSchema(BaseCamelSchema):
     """
     Описание структуры токена
     """
@@ -9,22 +8,22 @@ class TokenSchema(BaseSchema):
     access_token: str
     refresh_token: str
 
-class TokenResponseSchema(BaseModel):
+class TokenResponseSchema(BaseSchema):
     """
     Описание структуры ответа авторизауии пользователя
     """
     token: TokenSchema
 
-class LoginRequestSchema(BaseModel):
+class LoginRequestSchema(BaseSchema):
     """
     Описание структуры запроса на автризацию пользователя
     """
     email: str
     password: str
 
-class RefreshRequestSchema(BaseSchema):
+class RefreshRequestSchema(BaseCamelSchema):
     """
     Описание структуры запроса на реавтризацию пользователя
     """
-    refreshToken: str
+    refresh_token: str
 

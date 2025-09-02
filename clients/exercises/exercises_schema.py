@@ -1,9 +1,9 @@
 from pydantic import Field
-from clients.config_schema import BaseSchema
+from clients.config_schema import BaseCamelSchema, BaseSchema
 from typing import Optional
 
 
-class ExerciseSchema(BaseSchema):
+class ExerciseSchema(BaseCamelSchema):
     """
     Описание структуры упражнения.
     """
@@ -22,7 +22,7 @@ class ExerciseResponseSchema(BaseSchema):
     """
     exercise: ExerciseSchema
 
-class GetExercisesQuerySchema(BaseSchema):
+class GetExercisesQuerySchema(BaseCamelSchema):
     """
     Описание структуры запроса на получение списка упражнений.
     """
@@ -34,7 +34,7 @@ class GetExercisesResponseSchema(BaseSchema):
     """
     exercises: list[ExerciseSchema]
 
-class CreateExerciseRequestSchema(BaseSchema):
+class CreateExerciseRequestSchema(BaseCamelSchema):
     """
     Описание структуры запроса на создание упражнения.
     """
@@ -46,7 +46,7 @@ class CreateExerciseRequestSchema(BaseSchema):
     description: str
     estimated_time: str
 
-class UpdateExerciseRequestSchema(BaseSchema):
+class UpdateExerciseRequestSchema(BaseCamelSchema):
     """
     Описание структуры запроса на обновление упражнения.
     """

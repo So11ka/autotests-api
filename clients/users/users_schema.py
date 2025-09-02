@@ -1,8 +1,8 @@
 from pydantic import Field, EmailStr
-from clients.config_schema import BaseSchema
+from clients.config_schema import BaseCamelSchema, BaseSchema
 from typing import Optional
 
-class UserSchema(BaseSchema):
+class UserSchema(BaseCamelSchema):
     """
     Вложенная структура пользователя
     """
@@ -14,11 +14,11 @@ class UserSchema(BaseSchema):
 
 class UserResponseSchema(BaseSchema):
     """
-    Описание структуры ответа создания/изменения пользователя
+    Описание структуры ответа получения/создания/изменения пользователя
     """
     user: UserSchema
 
-class CreateUserRequestSchema(BaseSchema):
+class CreateUserRequestSchema(BaseCamelSchema):
     """
     Описание структуры данных запроса для создания пользователя
     """
@@ -28,7 +28,7 @@ class CreateUserRequestSchema(BaseSchema):
     first_name: str
     middle_name: str
 
-class UpdateUserRequestSchema(BaseSchema):
+class UpdateUserRequestSchema(BaseCamelSchema):
     """
     Описание структуры данных запроса для изменения пользователя
     """

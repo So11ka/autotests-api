@@ -44,7 +44,7 @@ class CoursesClient(APIClient):
         :param request: Экземпляр объекта UpdateCourseRequestSchema с title, maxScore, minScore, description, estimatedTime.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.patch(f"/api/v1/courses/{course_id}", json=request.model_dump(by_alias=True))
+        return self.patch(f"/api/v1/courses/{course_id}", json=request.dump())
 
     def delete_course_api(self, course_id: str) -> Response:
         """

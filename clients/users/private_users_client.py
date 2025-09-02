@@ -33,7 +33,7 @@ class PrivateUsersClient(APIClient):
         :param request: Словарь с email, lastName, firstName, middleName.
         :return: Ответ от сервера в виде объекта httpx.Client
         """
-        return self.patch(f'/api/v1/users/{user_id}', json=request.model_dump(by_alias=True))
+        return self.patch(f'/api/v1/users/{user_id}', json=request.dump())
 
     def delete_user_api(self, user_id: str) -> Response:
         """
