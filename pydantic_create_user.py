@@ -1,8 +1,7 @@
 from pydantic import BaseModel, EmailStr, Field, ConfigDict
 from pydantic.alias_generators import to_camel
 from uuid import uuid4
-from tools.fakers import random_password
-
+from tools.fakers import fake
 class BaseSchema(BaseModel):
     """
     Базовая схема для использования с ключами в camel_case формате
@@ -24,7 +23,7 @@ class CreateUserRequestSchema(BaseSchema):
     Описание структуры запроса создания пользователя
     """
     email: EmailStr
-    password: str = Field(default_factory=random_password)
+    password: str = Field(default_factory=fake.password)
     last_name: str #= Field(alias='lastName')
     first_name: str #= Field(alias='firstName')
     middle_name: str #= Field(alias='middleName')

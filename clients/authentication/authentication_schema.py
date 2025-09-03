@@ -1,4 +1,6 @@
 from clients.config_schema import BaseCamelSchema, BaseSchema
+from tools.fakers import fake
+from pydantic import Field
 
 class TokenSchema(BaseCamelSchema):
     """
@@ -18,12 +20,11 @@ class LoginRequestSchema(BaseSchema):
     """
     Описание структуры запроса на автризацию пользователя
     """
-    email: str
-    password: str
+    email: str = Field(default_factory=fake.email)
+    password: str = Field(default_factory=fake.password)
 
 class RefreshRequestSchema(BaseCamelSchema):
     """
     Описание структуры запроса на реавтризацию пользователя
     """
-    refresh_token: str
-
+    refresh_token: str = Field(default_factory=fake.sentence)

@@ -1,6 +1,7 @@
 from pydantic import Field, EmailStr
 from clients.config_schema import BaseCamelSchema, BaseSchema
 from typing import Optional
+from tools.fakers import fake
 
 class UserSchema(BaseCamelSchema):
     """
@@ -22,11 +23,11 @@ class CreateUserRequestSchema(BaseCamelSchema):
     """
     Описание структуры данных запроса для создания пользователя
     """
-    email: str
-    password: str
-    last_name: str
-    first_name: str
-    middle_name: str
+    email: str = Field(default_factory=fake.email)
+    password: str = Field(default_factory=fake.password)
+    last_name: str = Field(default_factory=fake.last_name)
+    first_name: str = Field(default_factory=fake.first_name)
+    middle_name: str = Field(default_factory=fake.middle_name)
 
 class UpdateUserRequestSchema(BaseCamelSchema):
     """

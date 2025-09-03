@@ -7,16 +7,15 @@ from clients.files.files_schema import CreateFileRequestSchema
 from clients.private_http_builder import AuthenticationRequestSchema
 from clients.users.public_users_client import PublicUsersClient
 from clients.users.users_schema import CreateUserRequestSchema
-from tools import fakers
-
+from tools.fakers import fakefrom tools.fakers import fake
 #--Создание пользователя--
 public_user_client = PublicUsersClient.get_public_client()
 create_user_request = CreateUserRequestSchema(
-    email = fakers.random_email(),
-    password = fakers.random_password(),
-    last_name = 'None',
-    first_name = fakers.random_name(),
-    middle_name = fakers.random_surname()
+    email = fake.email(),
+    password = fake.password(),
+    last_name = fake.last_name(),
+    first_name = fake.first_name(),
+    middle_name = fake.middle_name(),
 )
 create_user_response = public_user_client.create_user(create_user_request)
 authentication_client = AuthenticationRequestSchema(

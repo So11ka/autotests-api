@@ -6,13 +6,14 @@ import tools.fakers as fakers
 from tools.assertions.schema import validate_json_schema
 
 public_user_client = PublicUsersClient.get_public_client()
-create_user_request = CreateUserRequestSchema(
-    email = fakers.random_email(),
-    password = fakers.random_password(),
-    last_name = 'None',
-    first_name = fakers.random_name(),
-    middle_name = fakers.random_surname()
-)
+from tools.fakers import fake
+payload = {
+    "email": fake.email(),
+    "password": fake.password(),
+    "lastName": fake.last_name(),
+    "firstName": fake.first_name(),
+    "middleName": fake.middle_name(),
+}
 create_user_response = public_user_client.create_user(create_user_request)
 print(create_user_response.model_dump())
 

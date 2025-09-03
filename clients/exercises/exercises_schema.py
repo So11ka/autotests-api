@@ -1,7 +1,7 @@
 from pydantic import Field
 from clients.config_schema import BaseCamelSchema, BaseSchema
 from typing import Optional
-
+from tools.fakers import fake
 
 class ExerciseSchema(BaseCamelSchema):
     """
@@ -38,13 +38,13 @@ class CreateExerciseRequestSchema(BaseCamelSchema):
     """
     Описание структуры запроса на создание упражнения.
     """
-    title: str
-    course_id: str
-    max_score: int
-    min_score: int
-    order_index: int
-    description: str
-    estimated_time: str
+    title: str = Field(default_factory=fake.sentence)
+    course_id: str = Field(default_factory=fake.uuid4)
+    max_score: int = Field(default_factory=fake.max_score)
+    min_score: int = Field(default_factory=fake.min_score)
+    order_index: int = Field(default_factory=fake.integer)
+    description: str = Field(default_factory=fake.text)
+    estimated_time: str = Field(default_factory=fake.estimated_time)
 
 class UpdateExerciseRequestSchema(BaseCamelSchema):
     """

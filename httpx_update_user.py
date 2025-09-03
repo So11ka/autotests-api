@@ -1,14 +1,13 @@
 import httpx
-import tools.fakers as fakers
-
-
+from tools.fakers import fake
 with httpx.Client(base_url='http://localhost:8000/api/v1', timeout=10) as client:
+
     user_create_payload = {
-        "email": fakers.random_email(),
-        "password": fakers.random_password(),
-        "lastName": 'None',
-        "firstName": fakers.random_name(),
-        "middleName": fakers.random_surname(),
+        "email": fake.email(),
+        "password": fake.password(),
+        "lastName": fake.last_name(),
+        "firstName": fake.first_name(),
+        "middleName": fake.middle_name(),
     }
     create_user_response = client.post('/users', json=user_create_payload)
     user_id = create_user_response.json()['user']['id']
@@ -19,7 +18,7 @@ with httpx.Client(base_url='http://localhost:8000/api/v1', timeout=10) as client
     header_token = {'Authorization': f"Bearer {authentication_response.json()['token']['accessToken']}"}
 
     patch_user_payload = {
-        "email": fakers.random_email(),
+        "email": fake.email(),
         "lastName": 'None',
         "firstName": user_create_payload['firstName'],
         "middleName": user_create_payload['middleName']
