@@ -33,7 +33,7 @@ class UpdateUserRequestSchema(BaseCamelSchema):
     """
     Описание структуры данных запроса для изменения пользователя
     """
-    email: Optional[str] = Field(default=None)
+    email: Optional[str] = Field(default_factory=fake.email)
     last_name: Optional[str] = Field(default=None)
     first_name: Optional[str] = Field(default=None)
     middle_name: Optional[str] = Field(default=None)

@@ -47,7 +47,7 @@ class UpdateCourseRequestSchema(BaseCamelSchema):
     """
     Описание структуры запроса на обновление курса.
     """
-    title: Optional[str] = Field(default=None)
+    title: Optional[str] = Field(default_factory=fake.sentence)
     max_score: Optional[int] = Field(default=None)
     min_score: Optional[int] = Field(default=None)
     description: Optional[str] = Field(default=None)

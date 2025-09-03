@@ -53,6 +53,6 @@ class UpdateExerciseRequestSchema(BaseCamelSchema):
     title:  Optional[str] = Field(default=None)
     max_score:  Optional[int] = Field(default=None)
     min_score:  Optional[int] = Field(default=None)
-    order_index:  Optional[int] = Field(default=None)
+    order_index:  Optional[int] = Field(default_factory=fake.integer)
     description:  Optional[str] = Field(default=None)
     estimated_time:  Optional[str] = Field(default=None)
