@@ -7,8 +7,10 @@ from http import HTTPStatus
 from tools.assertions.authentication import assert_login_response
 from tools.assertions.base import assert_status_code
 from tools.assertions.schema import validate_json_schema
+from pytest import mark
 
-
+@mark.authentication
+@mark.regression
 def test_login():
     get_public_users_client = PublicUsersClient.get_public_client()
     get_authentication_client = AuthenticationClient.get_public_client()
