@@ -25,7 +25,7 @@ class AuthenticationClient(APIClient):
         :param request: Словарь с refreshToken.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post("/api/v1/authentication/refresh", json=request.model_dump(by_alias=True))
+        return self.post("/api/v1/authentication/refresh", json=request.model_dump())
 
     def get_login(self, request: LoginRequestSchema) -> TokenResponseSchema:
         """

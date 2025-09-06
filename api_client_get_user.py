@@ -2,7 +2,7 @@ from clients.private_http_builder import AuthenticationRequestSchema
 from clients.users.private_users_client import PrivateUsersClient
 from clients.users.public_users_client import PublicUsersClient
 from clients.users.users_schema import CreateUserRequestSchema, UpdateUserRequestSchema, UserResponseSchema
-from tools.assertions.schema import validate_json_schema
+from tools.assertions.json_schema import validate_json_schema
 from tools.fakers import fake
 
 public_user_client = PublicUsersClient.get_public_client()

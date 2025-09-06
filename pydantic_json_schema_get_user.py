@@ -3,7 +3,7 @@ from clients.users.private_users_client import PrivateUsersClient
 from clients.users.users_schema import CreateUserRequestSchema, UserResponseSchema
 from clients.users.public_users_client import PublicUsersClient
 import tools.fakers as fakers
-from tools.assertions.schema import validate_json_schema
+from tools.assertions.json_schema import validate_json_schema
 
 public_user_client = PublicUsersClient.get_public_client()
 from tools.fakers import fake
