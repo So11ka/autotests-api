@@ -6,7 +6,7 @@ from pytest import mark
 from tools.assertions.base import assert_status_code
 from tools.assertions.json_schema import validate_json_schema
 from tools.assertions.users import assert_create_user_response, assert_get_user_response
-from tests.conftest import public_user_client, UserFixture, private_user_client
+from fixtures.users import UserFixture
 
 
 @mark.api

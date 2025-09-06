@@ -1,6 +1,5 @@
 from clients.private_http_builder import AuthenticationRequestSchema
 from clients.config_schema import BaseSchema
-from clients.authentication.authentication_client import AuthenticationClient
 from pytest import fixture
 from clients.users.private_users_client import PrivateUsersClient
 from clients.users.public_users_client import PublicUsersClient
@@ -20,11 +19,6 @@ class UserFixture(BaseSchema):
     @property
     def authentication_user(self):
         return AuthenticationRequestSchema(email=self.request.email, password=self.request.password)
-
-
-@fixture
-def authentication_client() -> AuthenticationClient:
-    return AuthenticationClient.get_public_client()
 
 @fixture
 def public_user_client() -> PublicUsersClient:
