@@ -7,14 +7,16 @@ from tools.assertions.base import assert_status_code
 from tools.assertions.json_schema import validate_json_schema
 from tools.assertions.users import assert_create_user_response, assert_get_user_response
 from fixtures.users import UserFixture
+from tools.fakers import fake
 
 
 @mark.api
 @mark.users
 @mark.regression
-def test_create_user(public_user_client: PublicUsersClient):
+@mark.parametrize('domain', ('mail.ru', 'gmail.com', 'example.com'))
+def test_create_user(domain, public_user_client: PublicUsersClient):
 
-    request = CreateUserRequestSchema()
+    request = CreateUserRequestSchema(email=fake.email(domain))
     response = public_user_client.create_user_api(request)
     response_data = UserResponseSchema.model_validate_json(response.text)
 
