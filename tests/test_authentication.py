@@ -2,6 +2,8 @@ from clients.authentication.authentication_client import AuthenticationClient
 from clients.authentication.authentication_schema import TokenResponseSchema
 from clients.authentication.authentication_schema import LoginRequestSchema
 from http import HTTPStatus
+
+from clients.users.private_users_client import PrivateUsersClient
 from tools.assertions.authentication import assert_login_response
 from tools.assertions.base import assert_status_code
 from tools.assertions.json_schema import validate_json_schema
@@ -12,12 +14,7 @@ from tests.conftest import authentication_client, UserFixture
 @mark.authentication
 @mark.regression
 def test_login(authentication_client: AuthenticationClient, function_user: UserFixture):
-
-    authentication_data = LoginRequestSchema(
-        email = function_user.email,
-        password = function_user.password
-    )
-    response = authentication_client.login_api(authentication_data)
+    response = authentication_client.login_api(function_user.authentication_user)
     response_data = TokenResponseSchema.model_validate_json(response.text)
 
     assert_status_code(response.status_code, HTTPStatus.OK)
