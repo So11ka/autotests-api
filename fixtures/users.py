@@ -13,11 +13,13 @@ class UserFixture(BaseSchema):
     @property
     def email(self) -> str:
         return self.request.email
+
     @property
     def password(self) -> str:
         return self.request.password
+
     @property
-    def authentication_user(self):
+    def authentication_user(self) -> AuthenticationRequestSchema:
         return AuthenticationRequestSchema(email=self.request.email, password=self.request.password)
 
 @fixture

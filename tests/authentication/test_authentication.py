@@ -9,13 +9,13 @@ from fixtures.users import UserFixture
 
 
 @mark.authentication
-@mark.regression
-def test_login(authentication_client: AuthenticationClient, function_user: UserFixture):
-    response = authentication_client.login_api(function_user.authentication_user)
-    response_data = TokenResponseSchema.model_validate_json(response.text)
+class TestAuthentication:
+    @mark.regression
+    def test_login(self, authentication_client: AuthenticationClient, function_user: UserFixture):
+        response = authentication_client.login_api(function_user.authentication_user)
+        response_data = TokenResponseSchema.model_validate_json(response.text)
 
-    assert_status_code(response.status_code, HTTPStatus.OK)
-    assert_login_response(response_data)
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_login_response(response_data)
 
-    validate_json_schema(response.json(), response_data.model_json_schema())
-
+        validate_json_schema(response.json(), response_data.model_json_schema())

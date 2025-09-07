@@ -1,15 +1,20 @@
+from datetime import timedelta
+from cachetools import TTLCache, cached
 from httpx import Client
 from clients.authentication.authentication_client import AuthenticationClient
 from pydantic import BaseModel
 from clients.authentication.authentication_schema import LoginRequestSchema
 
-class AuthenticationRequestSchema(BaseModel):
+class AuthenticationRequestSchema(BaseModel, frozen=True):
     """
     Описание структуры данных запроса для аутентификации пользователя
     """
     email: str
     password: str
 
+cache = TTLCache(maxsize=128, ttl=timedelta(minutes=5).total_seconds())
+
+@cached(cache)
 def get_private_http_client(data: AuthenticationRequestSchema) -> Client:
     """
     Метод для возврата авторизованного клиента

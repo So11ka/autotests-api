@@ -27,4 +27,4 @@ class RefreshRequestSchema(BaseCamelSchema):
     """
     Описание структуры запроса на реавтризацию пользователя
     """
-    refresh_token: str = Field(default_factory=fake.sentence)
+    refresh_token: str = Field(default_factory=fake.sentence, )

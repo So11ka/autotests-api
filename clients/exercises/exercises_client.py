@@ -15,7 +15,7 @@ class ExercisesClient(APIClient):
         :param query: Словарь с courseId.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.get("/api/v1/exercises", params=query.model_dump(by_alias=True))
+        return self.get("/api/v1/exercises", params=query.model_dump())
 
     def get_exercise_api(self, exercise_id: str) -> Response:
         """
@@ -33,7 +33,7 @@ class ExercisesClient(APIClient):
         :param request: Словарь с title, courseId, maxScore, minScore, orderIndex, description, estimatedTime.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post("/api/v1/exercises", json=request.model_dump(by_alias=True))
+        return self.post("/api/v1/exercises", json=request.model_dump())
 
     def update_exercise_api(self, exercise_id: str, request: UpdateExerciseRequestSchema) -> Response:
         """
@@ -79,7 +79,7 @@ class ExercisesClient(APIClient):
         Метод создания упраженения с помощью метода create_exercise_api.
 
         :param request: Словарь с title, courseId, maxScore, minScore, orderIndex, description, estimatedTime.
-        :return: Словарь с id, title, courseId, maxScore, minScore, orderIndex, description, estimatedTime.
+        :return: Экземпляр объекта ExerciseResponseSchema с id, title, courseId, maxScore, minScore, orderIndex, description, estimatedTime.
         """
         response = self.create_exercise_api(request)
         return ExerciseResponseSchema.model_validate_json(response.text)

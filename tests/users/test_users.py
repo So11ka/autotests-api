@@ -13,25 +13,22 @@ from tools.fakers import fake
 @mark.api
 @mark.users
 @mark.regression
-@mark.parametrize('domain', ('mail.ru', 'gmail.com', 'example.com'))
-def test_create_user(domain, public_user_client: PublicUsersClient):
+class TestUsers:
+    @mark.parametrize('domain', ('mail.com', 'gmail.com', 'example.com'))
+    def test_create_user(self, domain, public_user_client: PublicUsersClient):
+        request = CreateUserRequestSchema(email=fake.email(domain))
+        response = public_user_client.create_user_api(request)
+        response_data = UserResponseSchema.model_validate_json(response.text)
 
-    request = CreateUserRequestSchema(email=fake.email(domain))
-    response = public_user_client.create_user_api(request)
-    response_data = UserResponseSchema.model_validate_json(response.text)
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_create_user_response(request, response_data)
 
-    assert_status_code(response.status_code, HTTPStatus.OK)
-    assert_create_user_response(request, response_data)
+        validate_json_schema(response.json(), response_data.model_json_schema())
 
-    validate_json_schema(response.json(), response_data.model_json_schema())
+    def test_get_user_me(self, private_user_client: PrivateUsersClient, function_user: UserFixture):
+        response = private_user_client.get_user_api(function_user.response.user.id)
 
-@mark.api
-@mark.users
-@mark.regression
-def test_get_user_me(private_user_client: PrivateUsersClient, function_user: UserFixture):
-    response = private_user_client.get_user_api(function_user.response.user.id)
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_get_user_response(UserResponseSchema.model_validate_json(response.text), function_user.response)
 
-    assert_status_code(response.status_code, HTTPStatus.OK)
-    assert_get_user_response(UserResponseSchema.model_validate_json(response.text), function_user.response)
-
-    validate_json_schema(response.json(), UserResponseSchema.model_json_schema())
+        validate_json_schema(response.json(), UserResponseSchema.model_json_schema())
