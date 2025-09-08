@@ -5,7 +5,7 @@ from fixtures.users import UserFixture
 from clients.config_schema import BaseSchema
 
 
-class FilesFixture(BaseSchema):
+class FileFixture(BaseSchema):
     request: CreateFileRequestSchema
     response: FileResponseSchema
 
@@ -15,8 +15,8 @@ def files_client(function_user: UserFixture) -> FilesClient:
     return FilesClient.get_private_client(function_user.authentication_user)
 
 @fixture
-def function_files(files_client: FilesClient) -> FilesFixture:
+def function_file(files_client: FilesClient) -> FileFixture:
     request = CreateFileRequestSchema(upload_file='./testdata/files/image.png')
     response = files_client.create_file(request)
-    return FilesFixture(request=request, response=response)
+    return FileFixture(request=request, response=response)
 

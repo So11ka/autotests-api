@@ -4,6 +4,21 @@ from tools.assertions.base import assert_equal, assert_length
 from tools.assertions.files import assert_file
 from tools.assertions.users import assert_user
 
+def assert_create_course_response(request: CreateCourseRequestSchema, response: CourseResponseSchema):
+    """
+    Проверяет, что ответ на создание курса соответствует данным из запроса.
+
+    :param request: Исходный запрос на создание курса.
+    :param response: Ответ API с созданными данными курса.
+    :raises AssertionError: Если хотя бы одно поле не совпадает.
+    """
+    assert_equal(request.title, response.course.title, 'title')
+    assert_equal(request.description, response.course.description, 'description')
+    assert_equal(request.estimated_time, response.course.estimated_time, 'estimated_time')
+    assert_equal(request.max_score, response.course.max_score, 'max_score')
+    assert_equal(request.min_score, response.course.min_score, 'min_score')
+    assert_equal(request.preview_file_id, response.course.preview_file.id, 'preview_file_id')
+    assert_equal(request.created_by_user_id, response.course.created_by_user.id, 'created_by_user_id')
 
 def assert_update_course_response(request: UpdateCourseRequestSchema, response: CourseResponseSchema):
     """
@@ -24,7 +39,8 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
     assert_equal(actual.estimated_time, expected.estimated_time, 'estimated_time')
     assert_equal(actual.max_score, expected.max_score, 'max_score')
     assert_equal(actual.min_score, expected.min_score, 'min_score')
-    assert_user(actual.created_by_user, expected.created_by_user,)
+
+    assert_user(actual.created_by_user, expected.created_by_user)
     assert_file(actual.preview_file, expected.preview_file)
 
 def assert_get_courses_response(get_courses_response: CoursesResponseSchema, create_course_responses: list[CreateCourseRequestSchema]):
