@@ -50,9 +50,9 @@ class UpdateExerciseRequestSchema(BaseCamelSchema):
     """
     Описание структуры запроса на обновление упражнения.
     """
-    title:  Optional[str] = Field(default=None)
-    max_score:  Optional[int] = Field(default=None)
-    min_score:  Optional[int] = Field(default=None)
+    title:  Optional[str] = Field(default_factory=fake.sentence)
+    max_score:  Optional[int] = Field(default_factory=fake.max_score)
+    min_score:  Optional[int] = Field(default_factory=fake.min_score)
     order_index:  Optional[int] = Field(default_factory=fake.integer)
-    description:  Optional[str] = Field(default=None)
-    estimated_time:  Optional[str] = Field(default=None)
+    description:  Optional[str] = Field(default_factory=fake.text)
+    estimated_time:  Optional[str] = Field(default_factory=fake.estimated_time)

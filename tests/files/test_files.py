@@ -1,7 +1,5 @@
 from http import HTTPStatus
-
 from pytest import mark
-
 from clients.errors_schema import ValidationErrorResponseSchema, InternalErrorResponseSchema
 from clients.files.files_client import FilesClient
 from clients.files.files_schema import CreateFileRequestSchema, FileResponseSchema

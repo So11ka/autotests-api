@@ -15,7 +15,7 @@ def exercises_client(function_user: UserFixture) -> ExercisesClient:
     return ExercisesClient.get_private_client(function_user.authentication_user)
 
 @fixture
-def function_exercise(exercises_client: ExercisesClient, function_courses: CoursesFixture, function_user: UserFixture) -> ExercisesFixture:
-    request = CreateExerciseRequestSchema(course_id=function_courses.response.exercise.id)
+def function_exercise(exercises_client: ExercisesClient, function_course: CoursesFixture, function_user: UserFixture) -> ExercisesFixture:
+    request = CreateExerciseRequestSchema(course_id=function_course.response.exercise.id)
     response = exercises_client.create_exercise(request)
     return ExercisesFixture(request=request, response=response)

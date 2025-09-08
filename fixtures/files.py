@@ -9,6 +9,7 @@ class FilesFixture(BaseSchema):
     request: CreateFileRequestSchema
     response: FileResponseSchema
 
+
 @fixture
 def files_client(function_user: UserFixture) -> FilesClient:
     return FilesClient.get_private_client(function_user.authentication_user)

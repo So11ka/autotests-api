@@ -24,7 +24,7 @@ class CourseSchema(BaseCamelSchema):
     estimated_time: str
     created_by_user: UserSchema
 
-class CoursesResponseSchema(BaseSchema):
+class CourseResponseSchema(BaseSchema):
     """
     Описание структуры данных ответа создания курса
     """
@@ -48,7 +48,10 @@ class UpdateCourseRequestSchema(BaseCamelSchema):
     Описание структуры запроса на обновление курса.
     """
     title: Optional[str] = Field(default_factory=fake.sentence)
-    max_score: Optional[int] = Field(default=None)
-    min_score: Optional[int] = Field(default=None)
-    description: Optional[str] = Field(default=None)
-    estimated_time: Optional[str] = Field(default=None)
+    max_score: Optional[int] = Field(default_factory=fake.max_score)
+    min_score: Optional[int] = Field(default_factory=fake.min_score)
+    description: Optional[str] = Field(default_factory=fake.text)
+    estimated_time: Optional[str] = Field(default_factory=fake.estimated_time)
+    
+class CoursesResponseSchema(BaseSchema):
+    courses: list[CourseSchema]

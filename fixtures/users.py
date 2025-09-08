@@ -11,14 +11,6 @@ class UserFixture(BaseSchema):
     response: UserResponseSchema
 
     @property
-    def email(self) -> str:
-        return self.request.email
-
-    @property
-    def password(self) -> str:
-        return self.request.password
-
-    @property
     def authentication_user(self) -> AuthenticationRequestSchema:
         return AuthenticationRequestSchema(email=self.request.email, password=self.request.password)
 
