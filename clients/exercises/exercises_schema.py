@@ -28,7 +28,7 @@ class GetExercisesQuerySchema(BaseCamelSchema):
     """
     course_id: str
 
-class GetExercisesResponseSchema(BaseSchema):
+class ExercisesResponseSchema(BaseSchema):
     """
     Описание структуры ответа получения списка упражнений.
     """
@@ -56,3 +56,5 @@ class UpdateExerciseRequestSchema(BaseCamelSchema):
     order_index:  Optional[int] = Field(default_factory=fake.integer)
     description:  Optional[str] = Field(default_factory=fake.text)
     estimated_time:  Optional[str] = Field(default_factory=fake.estimated_time)
+    
+    

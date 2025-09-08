@@ -33,6 +33,13 @@ def assert_update_course_response(request: UpdateCourseRequestSchema, response: 
 
 
 def assert_course(actual: CourseSchema, expected: CourseSchema):
+    """
+        Проверяет, что фактические данные курса соответствуют ожидаемым.
+
+        :param actual: Фактические данные курса.
+        :param expected: Ожидаемые данные курса.
+        :raises AssertionError: Если хотя бы одно поле не совпадает.
+        """
     assert_equal(actual.id, expected.id, 'id')
     assert_equal(actual.title, expected.title, 'title')
     assert_equal(actual.description, expected.description, 'description')
@@ -43,7 +50,7 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
     assert_user(actual.created_by_user, expected.created_by_user)
     assert_file(actual.preview_file, expected.preview_file)
 
-def assert_get_courses_response(get_courses_response: CoursesResponseSchema, create_course_responses: list[CreateCourseRequestSchema]):
+def assert_get_courses_response(get_courses_response: CoursesResponseSchema, create_course_responses: list[CourseResponseSchema]):
     assert_length(get_courses_response.courses, create_course_responses, 'courses')
 
     for index, expected in enumerate(create_course_responses):

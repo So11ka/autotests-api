@@ -1,7 +1,7 @@
 from httpx import Response
 from clients.api_client import APIClient
 from clients.private_http_builder import get_private_http_client, AuthenticationRequestSchema
-from clients.exercises.exercises_schema import ExerciseResponseSchema, GetExercisesResponseSchema, GetExercisesQuerySchema, UpdateExerciseRequestSchema, CreateExerciseRequestSchema
+from clients.exercises.exercises_schema import ExerciseResponseSchema, ExercisesResponseSchema, GetExercisesQuerySchema, UpdateExerciseRequestSchema, CreateExerciseRequestSchema
 
 class ExercisesClient(APIClient):
     """
@@ -54,7 +54,7 @@ class ExercisesClient(APIClient):
         """
         return self.delete(f"/api/v1/exercises/{exercise_id}")
 
-    def get_exercises(self, query: GetExercisesQuerySchema) -> GetExercisesResponseSchema:
+    def get_exercises(self, query: GetExercisesQuerySchema) -> ExercisesResponseSchema:
         """
         Метод получения списка упражнений с помощью метода get_exercises_api.
 
@@ -62,7 +62,7 @@ class ExercisesClient(APIClient):
         :return: Словарь с id, title, courseId, maxScore, minScore, orderIndex, description, estimatedTime.
         """
         response = self.get_exercises_api(query)
-        return GetExercisesResponseSchema.model_validate_json(response.text)
+        return ExercisesResponseSchema.model_validate_json(response.text)
 
     def get_exercise(self, exercise_id: str) -> ExerciseResponseSchema:
         """
