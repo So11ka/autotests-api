@@ -10,9 +10,9 @@ class FileSchema(BaseModel):
     filename: str
     directory: str
 
-class CreateFileResponseSchema(BaseModel):
+class FileResponseSchema(BaseModel):
     """
-    Описание структуры ответа создания файла
+    Описание структуры ответа создания/получения файла
     """
     file: FileSchema
 

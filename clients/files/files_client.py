@@ -1,7 +1,7 @@
 from httpx import Response
 from clients.api_client import APIClient
 from clients.private_http_builder import get_private_http_client, AuthenticationRequestSchema
-from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema
+from clients.files.files_schema import CreateFileRequestSchema, FileResponseSchema
 
 class FilesClient(APIClient):
     """
@@ -39,7 +39,7 @@ class FilesClient(APIClient):
         """
         return self.delete(f"/api/v1/files/{file_id}")
 
-    def create_file(self, request: CreateFileRequestSchema) -> CreateFileResponseSchema:
+    def create_file(self, request: CreateFileRequestSchema) -> FileResponseSchema:
         """
         Метод выполняет создание файла с помощью метода create_file_api
 
@@ -47,7 +47,7 @@ class FilesClient(APIClient):
         :return: Возвращает словарь с id, filename, url, directory
         """
         response = self.create_file_api(request)
-        return CreateFileResponseSchema.model_validate_json(response.text)
+        return FileResponseSchema.model_validate_json(response.text)
 
     @classmethod
     def get_private_client(cls, data: AuthenticationRequestSchema) -> 'FilesClient':
