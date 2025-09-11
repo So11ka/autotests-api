@@ -27,6 +27,7 @@ import allure
 class TestFiles:
     @allure.title('Создание файла')
     @allure.story(AllureStory.CREATE_ENTITY)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
     def test_create_file(self, files_client: FilesClient):
         request = CreateFileRequestSchema(upload_file='./testdata/files/image.png')
         response = files_client.create_file_api(request)
@@ -77,7 +78,7 @@ class TestFiles:
 
     @allure.title('Удаление файла')
     @allure.story(AllureStory.DELETE_ENTITY)
-    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.DELETE_ENTITY)
     def test_delete_file(self, files_client: FilesClient, function_file: FileFixture):
         delete_response = files_client.delete_file_api(function_file.response.file.id)
 
