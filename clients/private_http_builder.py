@@ -4,6 +4,8 @@ from httpx import Client
 from clients.authentication.authentication_client import AuthenticationClient
 from pydantic import BaseModel
 from clients.authentication.authentication_schema import LoginRequestSchema
+from clients.event_hooks import curl_event_hook
+
 
 class AuthenticationRequestSchema(BaseModel, frozen=True):
     """
@@ -31,4 +33,8 @@ def get_private_http_client(data: AuthenticationRequestSchema) -> Client:
     # Вызываем метод аутентификации и передаем в него словарь с email, password
     login_response = authentication_client.get_login(request_login)
 
-    return Client(timeout=10, base_url='http://localhost:8000', headers={'Authorization': f'Bearer {login_response.token.access_token}'})
+    return Client(timeout=10,
+                  base_url='http://localhost:8000',
+                  headers={'Authorization': f'Bearer {login_response.token.access_token}'},
+                  event_hooks={'request': [curl_event_hook]}
+    )

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTExVDA4OjE4OjI1LjcxMTY4OCIsInVzZXJfaWQiOiI1MDZiYjI2OC0xOTU0LTQ1NjMtOGE0Zi1jMjMwMjYzOWZiZDcifQ.P5-E9bNBCrTMrlSyQh12i33W3NGpMJla_gS-e1Z35pA' \
+  -H 'content-length: 331' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Huge when both test sea consider fact.","courseId":"d92a431e-7567-43df-ae86-c824d6b7bd44","maxScore":99,"minScore":26,"orderIndex":76,"description":"Pretty popular term Democrat amount. Director however reason feeling.\nToday about number past. Enough themselves his the. Wrong wall financial.","estimatedTime":"5 weeks"}'
