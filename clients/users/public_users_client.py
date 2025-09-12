@@ -1,3 +1,4 @@
+from typing import Self
 import allure
 from clients.api_client import APIClient
 from httpx import Response
@@ -31,5 +32,5 @@ class PublicUsersClient(APIClient):
         return UserResponseSchema.model_validate_json(response.text)
 
     @classmethod
-    def get_public_client(cls, timeout: int | float=10) -> 'PublicUsersClient':
+    def get_public_client(cls, timeout: int | float=10) -> Self:
         return cls(get_public_http_client(timeout))

@@ -1,3 +1,5 @@
+from typing import Self
+
 from httpx import Response
 from clients.api_client import APIClient
 from clients.authentication.authentication_schema import *
@@ -47,5 +49,5 @@ class AuthenticationClient(APIClient):
         return TokenResponseSchema.model_validate_json(response.text)
 
     @classmethod
-    def get_public_client(cls, timeout: int | float=10) -> 'AuthenticationClient':
+    def get_public_client(cls, timeout: int | float=10) -> Self:
         return cls(get_public_http_client(timeout))

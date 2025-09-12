@@ -1,3 +1,5 @@
+from typing import Self
+
 from httpx import Response
 from clients.api_client import APIClient
 from clients.private_http_builder import get_private_http_client, AuthenticationRequestSchema
@@ -71,5 +73,5 @@ class CoursesClient(APIClient):
         return CourseResponseSchema.model_validate_json(response.text)
 
     @classmethod
-    def get_private_client(cls, data: AuthenticationRequestSchema) -> 'CoursesClient':
+    def get_private_client(cls, data: AuthenticationRequestSchema) -> Self:
         return cls(client=get_private_http_client(data))
