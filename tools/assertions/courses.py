@@ -4,6 +4,10 @@ from tools.assertions.base import assert_equal, assert_length
 from tools.assertions.files import assert_file
 from tools.assertions.users import assert_user
 import allure
+from tools.logger import get_logger
+
+logger = get_logger('AUTHENTICATION_ASSERTIONS')
+
 
 @allure.step("Check create course response")
 def assert_create_course_response(request: CreateCourseRequestSchema, response: CourseResponseSchema):
@@ -14,6 +18,8 @@ def assert_create_course_response(request: CreateCourseRequestSchema, response: 
     :param response: Ответ API с созданными данными курса.
     :raises AssertionError: Если хотя бы одно поле не совпадает.
     """
+    logger.info('Check create course response')
+
     assert_equal(request.title, response.course.title, 'title')
     assert_equal(request.description, response.course.description, 'description')
     assert_equal(request.estimated_time, response.course.estimated_time, 'estimated_time')
@@ -31,6 +37,8 @@ def assert_update_course_response(request: UpdateCourseRequestSchema, response: 
     :param response: Ответ API с обновленными данными курса.
     :raises AssertionError: Если хотя бы одно поле не совпадает.
     """
+    logger.info('Check update course response')
+
     for i in request.dump(False):
         assert_equal(getattr(request, i), getattr(response.course, i, None),str(i))
 
@@ -43,6 +51,8 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
         :param expected: Ожидаемые данные курса.
         :raises AssertionError: Если хотя бы одно поле не совпадает.
         """
+    logger.info('Check course')
+
     assert_equal(actual.id, expected.id, 'id')
     assert_equal(actual.title, expected.title, 'title')
     assert_equal(actual.description, expected.description, 'description')
@@ -55,6 +65,7 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
 
 @allure.step("Check get courses response")
 def assert_get_courses_response(get_courses_response: CoursesResponseSchema, create_course_responses: list[CourseResponseSchema]):
+    logger.info('Check get courses response')
     assert_length(get_courses_response.courses, create_course_responses, 'courses')
 
     for index, expected in enumerate(create_course_responses):
