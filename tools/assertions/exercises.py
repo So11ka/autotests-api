@@ -102,3 +102,4 @@ def assert_exercise_not_found(actual: InternalErrorResponseSchema):
     expected = InternalErrorResponseSchema(detail='Exercise not found')
 
     assert_internal_error_response(actual, expected)
+
