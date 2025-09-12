@@ -1,0 +1,76 @@
+# created by virtualenv automatically
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+.venv/
+
+# PyCharm project settings
+.idea/
+
+# VSCode settings
+.vscode/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.testmondata
+
+# Allure test reports
+allure-report/
+allure-results/
+
+# Pydantic compiled schema cache (if used)
+__pydantic_cache__/
+
+# Environment variable files
+.env
+.env.*
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# SQLite DB (если не нужен в репозитории)
+*.sqlite3
+*.db
+
+# MyPy, Ruff, pylint, etc.
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Allure reports
+allure-results/
+allure-report/

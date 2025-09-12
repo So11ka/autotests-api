@@ -1,12 +1,13 @@
 from clients.errors_schema import ValidationErrorResponseSchema, ValidationErrorSchema, InternalErrorResponseSchema
 from clients.files.files_schema import FileSchema, CreateFileRequestSchema, FileResponseSchema
+from config import settings
 from tools.assertions.base import assert_equal, assert_is_true
 from tools.assertions.errors import assert_validation_error_response, assert_internal_error_response
 import allure
 
 @allure.step("Check create file response")
 def assert_create_file_response(request: CreateFileRequestSchema, response: FileResponseSchema):
-    expected_url = f'http://localhost:8000/static/{request.directory}/{request.filename}'
+    expected_url = f'{settings.http_client.client_url}static/{request.directory}/{request.filename}'
 
     assert_equal(request.filename, response.file.filename, 'filename')
     assert_equal(request.directory, response.file.directory, 'directory')
