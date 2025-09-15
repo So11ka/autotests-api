@@ -8,7 +8,7 @@ from tools.fakers import fake
 public_user_client = PublicUsersClient.get_public_client()
 create_user_request = CreateUserRequestSchema()
 create_user_response = public_user_client.create_user(create_user_request)
-print(create_user_response.model_dump())
+print(create_user_response.model_dump(by_alias=True))
 
 authentication_user_request = AuthenticationRequestSchema(
     email = create_user_request.email,
@@ -16,13 +16,13 @@ authentication_user_request = AuthenticationRequestSchema(
 )
 private_user_client = PrivateUsersClient.get_private_client(authentication_user_request)
 private_user_response = private_user_client.get_user()
-print(private_user_response.model_dump())
+print(private_user_response.model_dump(by_alias=True))
 
 update_user_request = UpdateUserRequestSchema(
     email = fake.email()
 )
 update_user_response = private_user_client.update_user(create_user_response.user.id, update_user_request)
-print(update_user_response.model_dump())
+print(update_user_response.model_dump(by_alias=True))
 
 
 update_user_request_schema = UserResponseSchema.model_json_schema()

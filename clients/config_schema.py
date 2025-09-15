@@ -6,8 +6,7 @@ class BaseSchema(BaseModel):
     Базовая схема
     """
     model_config = ConfigDict(
-        populate_by_name=True,
-        serialize_by_alias=True
+        populate_by_name=True
     )
 
     def dump(self, by_alias: bool = True) -> dict:
@@ -25,8 +24,7 @@ class BaseCamelSchema(BaseSchema):
     """
     model_config = ConfigDict(
         alias_generator=to_camel,
-        populate_by_name=True,
-        serialize_by_alias=True
+        populate_by_name=True
     )
 
 
