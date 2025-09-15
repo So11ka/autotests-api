@@ -21,7 +21,7 @@ class CoursesClient(APIClient):
         :param query: Экземпляр объекта GetCoursesQuerySchema с userId.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.get(f"{APIRoutes.COURSES}", params=query.model_dump(by_alias=True))
+        return self.get(f"{APIRoutes.COURSES}", params=query.model_dump())
 
     @allure.step("Get course by id {course_id}")
     def get_course_api(self, course_id: str) -> Response:
@@ -42,7 +42,7 @@ class CoursesClient(APIClient):
         previewFileId, createdByUserId.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post(f"{APIRoutes.COURSES}", json=request.model_dump(by_alias=True))
+        return self.post(f"{APIRoutes.COURSES}", json=request.model_dump())
 
     @allure.step("Update course by id {course_id}")
     def update_course_api(self, course_id: str, request: UpdateCourseRequestSchema) -> Response:

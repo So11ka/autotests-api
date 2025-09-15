@@ -23,7 +23,7 @@ create_file_request = CreateFileRequestSchema(
     upload_file= './testdata/files/image.png',
 )
 create_file_response = files_client.create_file(create_file_request)
-print(f'Create file data: {create_file_response.model_dump(by_alias=True)}')
+print(f'Create file data: {create_file_response.model_dump()}')
 
 #--Создание курса--
 courses_client = CoursesClient.get_private_client(authentication_client)
@@ -32,10 +32,10 @@ create_course_request = CreateCourseRequestSchema(
     created_by_user_id = create_user_response.user.id
 )
 create_course_response = courses_client.create_course(create_course_request)
-print(f'Create course data: {create_course_response.model_dump(by_alias=True)}')
+print(f'Create course data: {create_course_response.model_dump()}')
 
 #--Создание упражнения--
 exercises_client = ExercisesClient.get_private_client(authentication_client)
 create_exercise_request = CreateExerciseRequestSchema(course_id = create_course_response.course.id)
 create_exercise_response = exercises_client.create_exercise(create_exercise_request)
-print(f'Create exercise data: {create_exercise_response.model_dump(by_alias=True)}')
+print(f'Create exercise data: {create_exercise_response.model_dump()}')
