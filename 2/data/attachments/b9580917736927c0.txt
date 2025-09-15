@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjE5OjE1Ljg1NDE1NCIsInVzZXJfaWQiOiJkZjlkZTM1Mi04ODVjLTRmYzEtYjE5Ny03NmNiMzRhZDRjOGEifQ.-fuRc2WXlbYyvpZ7v4O_7_Ip14P2CIa6tYVlyMr4UK8' \
+  -H 'content-length: 372' \
+  -H 'content-type: application/json' \
+  -d '{"title":"On chair ask letter evidence pattern up.","max_score":65,"min_score":9,"description":"Perform them organization yeah increase hour hot. Debate reflect above though will character Mrs. Every there security TV art yet.","estimated_time":"8 weeks","preview_file_id":"3ff20028-f9b9-45fd-89c4-43c0942b9819","created_by_user_id":"df9de352-885c-4fc1-b197-76cb34ad4c8a"}'

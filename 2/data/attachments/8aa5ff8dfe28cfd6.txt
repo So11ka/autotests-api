@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjE5OjE3LjAxNTkxOSIsInVzZXJfaWQiOiJmMzQxYTQyNy01YWMyLTRlMDUtOGM0Ni0yMDc2MGRlOTBiOWEifQ.PBmU9UVXzactFABDSNhEQAKwEHIIPAeUkbs-yC5Vang' \
+  -H 'content-length: 407' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Deep at ready bag cold growth.","max_score":91,"min_score":4,"description":"Relate artist our occur president back accept. Animal treat start during rather especially available law.\nBy sense must religious whether. Son music quality firm behind edge.","estimated_time":"6 weeks","preview_file_id":"d6a01f66-4d12-4713-822c-f3376ac1572a","created_by_user_id":"f341a427-5ac2-4e05-8c46-20760de90b9a"}'

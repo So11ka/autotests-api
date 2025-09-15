@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjE5OjE1LjU4MzM3MiIsInVzZXJfaWQiOiI1MDMwYzAxMi1lOWY5LTQ1YTQtYTRkYS0xOWVlYjUxMzUwMjYifQ.spE1Xuf8CUGVO8NLh7772xeKoiU81ZebEPltg5aQLtA' \
+  -H 'content-length: 398' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Technology federal mean well growth.","max_score":72,"min_score":14,"description":"Determine own center fine fast blood miss marriage. Left nation realize such major.\nSpecial hit remember. Project join make reason. Actually candidate forget.","estimated_time":"3 weeks","preview_file_id":"3606fb61-1080-407d-a4d5-8e864c873c04","created_by_user_id":"5030c012-e9f9-45a4-a4da-19eeb5135026"}'

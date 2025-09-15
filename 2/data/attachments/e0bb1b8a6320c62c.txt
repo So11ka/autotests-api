@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjE5OjE2Ljc0MzM1NyIsInVzZXJfaWQiOiI3NGMzYTA4ZC0xNDQ0LTRiZWEtODcxZS0xNmQyNDQ4ZTM5YTIifQ.gZCU_wq3GSo4Bse9ZXBl81UR93lZXjw7komm9V7F8p4' \
+  -H 'content-length: 390' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Population how write issue allow.","max_score":86,"min_score":28,"description":"Person claim quite. Education once its may become discover argue chair.\nStory although hold just whole put. American three grow personal. Her wait green.","estimated_time":"3 weeks","preview_file_id":"ed740f7d-82a5-454c-b015-d2699943ddce","created_by_user_id":"74c3a08d-1444-4bea-871e-16d2448e39a2"}'

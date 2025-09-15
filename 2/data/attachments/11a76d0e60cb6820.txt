@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjE5OjEzLjIyMzEzOSIsInVzZXJfaWQiOiIwMDgzYzliZS0yMWI2LTQ3MGMtOTk5ZS0zM2VkMzkzZjYzNzYifQ.0jqG0fl9gFQ2v0Q9dGqSYki_UCOLthgNuB3Z2pZW3B4' \
+  -H 'content-length: 379' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Laugh enter ago million range.","max_score":50,"min_score":22,"description":"Peace former pressure language industry break business. He education knowledge send beyond. Level into management food seat. No better letter art.","estimated_time":"7 weeks","preview_file_id":"f15c1db8-53d8-4655-9738-fecfa47cb127","created_by_user_id":"0083c9be-21b6-470c-999e-33ed393f6376"}'

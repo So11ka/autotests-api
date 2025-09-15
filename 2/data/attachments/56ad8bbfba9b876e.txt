@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjE5OjE0LjM2NzQ2NyIsInVzZXJfaWQiOiI0YzM4ZjM3Ny0xZjliLTRmOTAtOWMyMC04OGE2OTQ3Mzc0Y2MifQ.aAtjIZ76dWVYci_AVkphWscBy9lBZURLLxq72D9GKas' \
+  -H 'content-length: 433' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Itself thought will relationship effort house scientist back.","max_score":60,"min_score":27,"description":"Adult possible point third detail. Campaign collection life miss space. Others ever music.\nMight I rise attack break industry heavy. Base later number consider western.","estimated_time":"3 weeks","preview_file_id":"59fe70c2-1b15-4e7f-9f61-bcc0b10ccded","created_by_user_id":"4c38f377-1f9b-4f90-9c20-88a6947374cc"}'

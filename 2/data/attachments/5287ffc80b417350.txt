@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjE5OjE3LjkwNTExMiIsInVzZXJfaWQiOiJmMDFlMjIyZS04ZGZlLTQ3YTYtYTExNi04NTFjYzY3Zjc2ODYifQ.JiUD-RdJTZq1wwL_RG2EtiAl7rm51w0L9cfbl1_eAUU' \
+  -H 'content-length: 367' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Democrat much field rise.","max_score":96,"min_score":25,"description":"Agree miss past large action up behind raise. Him it offer increase my.\nTalk concern include the. Thus toward front region score life all.","estimated_time":"9 weeks","preview_file_id":"8bf7044a-4469-4f82-9318-89d5c61b909a","created_by_user_id":"f01e222e-8dfe-47a6-a116-851cc67f7686"}'

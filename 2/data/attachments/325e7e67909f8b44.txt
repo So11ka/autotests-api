@@ -1,0 +1,11 @@
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to "422"
+INFO     FILES_ASSERTIONS:files.py:105 Checking get file with incorrect file id response
+INFO     ERROR_ASSERTIONS:errors.py:37 Check validation error response
+INFO     BASE_ASSERTIONS:base.py:62 Check that length of "details" equals to "1" length
+INFO     ERROR_ASSERTIONS:errors.py:17 Check validation error
+INFO     BASE_ASSERTIONS:base.py:35 Check that "type" equals to "uuid_parsing"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "input" equals to "incorrect-file-id"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "context" equals to "{'error': 'invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1'}"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "message" equals to "Input should be a valid UUID, invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "location" equals to "['path', 'file_id']"
+INFO     SCHEMA_ASSERTIONS:json_schema.py:18 Validating JSON schema

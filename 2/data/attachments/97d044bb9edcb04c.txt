@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjE5OjE0LjY0MDEzNiIsInVzZXJfaWQiOiJiODU2YWFiMi0yOTkxLTQ4NDItYWZhNS03ODM1OTZjZGM3MzQifQ.XhaUx-qpvRymYGdI4GWQI99geXJJA1qH1dkzw2Pqgbw' \
+  -H 'content-length: 452' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Space laugh recent final early protect statement.","max_score":75,"min_score":1,"description":"Play car avoid upon energy my news play. Author table exist every guess shake.\nFinancial road laugh democratic top claim. Wall he prove while car up machine. Beat war now above very act civil leader.","estimated_time":"10 weeks","preview_file_id":"f3fecbb2-9a6e-46fe-a892-630e9eb857e0","created_by_user_id":"b856aab2-2991-4842-afa5-783596cdc734"}'
