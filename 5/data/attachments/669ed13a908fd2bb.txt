@@ -1,0 +1,9 @@
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to "200"
+INFO     EXERCISES_ASSERTIONS:exercises.py:87 Check update exercise response
+INFO     BASE_ASSERTIONS:base.py:35 Check that "title" equals to "Spring worker score put alone."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "max_score" equals to "86"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "min_score" equals to "17"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "order_index" equals to "20"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "description" equals to "Improve team suddenly travel between already. Pass after often. Will yes democratic write. Same rather effect him where some staff."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "estimated_time" equals to "10 weeks"
+INFO     SCHEMA_ASSERTIONS:json_schema.py:18 Validating JSON schema

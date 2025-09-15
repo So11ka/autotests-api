@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDEwOjI1OjU5LjEyMzUzOSIsInVzZXJfaWQiOiIxZDczN2FjMC1iYzcwLTQ2MDctYWVhNy1iM2FlMjg3NTM5MDQifQ.MRcMyWeTuEmMSDIRn4YpoMXFPZadb8PW0jyQ4i5CwbQ' \
+  -H 'content-length: 373' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Peace future name business name yet war.","courseId":"95495412-75c8-4003-bbd2-5cb4cdfa4005","maxScore":62,"minScore":24,"orderIndex":96,"description":"Suggest choose population plant. Strategy final result whatever feeling decision set. From month go house.\nSerious eat rise into. Strategy main type stop process hour anything region.","estimatedTime":"1 weeks"}'

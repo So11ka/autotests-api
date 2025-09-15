@@ -1,0 +1,48 @@
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to "200"
+INFO     EXERCISES_ASSERTIONS:exercises.py:71 Check get exercises response
+INFO     BASE_ASSERTIONS:base.py:62 Check that length of "exercises" equals to "5" length
+INFO     EXERCISES_ASSERTIONS:exercises.py:39 Check exercise
+INFO     BASE_ASSERTIONS:base.py:35 Check that "title" equals to "Energy upon ago space."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "course_id" equals to "8cc49aaf-909a-4d98-b99a-10ca56240519"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "max_score" equals to "66"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "min_score" equals to "11"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "description" equals to "Difference stay three than. Issue consider country success idea though alone large.
+Boy manager administration born federal writer well. How shoulder admit blue effort. Worry mouth happy wind dark."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "estimated_time" equals to "5 weeks"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "order_index" equals to "66"
+INFO     EXERCISES_ASSERTIONS:exercises.py:39 Check exercise
+INFO     BASE_ASSERTIONS:base.py:35 Check that "title" equals to "College husband never glass least factor health."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "course_id" equals to "8cc49aaf-909a-4d98-b99a-10ca56240519"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "max_score" equals to "81"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "min_score" equals to "26"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "description" equals to "Beyond bed peace industry like drop commercial. Own set suffer. Improve without catch together century clear.
+Agent both draw technology series local. Item feel thank when police from short would."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "estimated_time" equals to "6 weeks"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "order_index" equals to "79"
+INFO     EXERCISES_ASSERTIONS:exercises.py:39 Check exercise
+INFO     BASE_ASSERTIONS:base.py:35 Check that "title" equals to "News easy on various fall green no."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "course_id" equals to "8cc49aaf-909a-4d98-b99a-10ca56240519"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "max_score" equals to "71"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "min_score" equals to "23"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "description" equals to "Late none project billion. Method information direction product sign become morning power. Especially lot good difficult gas baby.
+Soldier price he Democrat."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "estimated_time" equals to "9 weeks"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "order_index" equals to "15"
+INFO     EXERCISES_ASSERTIONS:exercises.py:39 Check exercise
+INFO     BASE_ASSERTIONS:base.py:35 Check that "title" equals to "Letter while race dog surface care."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "course_id" equals to "8cc49aaf-909a-4d98-b99a-10ca56240519"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "max_score" equals to "68"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "min_score" equals to "30"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "description" equals to "Worry hand course between evidence attention. Teach trial scene little quality.
+Wait box them break his food in result. Bar from son law sea."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "estimated_time" equals to "1 weeks"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "order_index" equals to "62"
+INFO     EXERCISES_ASSERTIONS:exercises.py:39 Check exercise
+INFO     BASE_ASSERTIONS:base.py:35 Check that "title" equals to "Key city American rich win."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "course_id" equals to "8cc49aaf-909a-4d98-b99a-10ca56240519"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "max_score" equals to "73"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "min_score" equals to "16"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "description" equals to "See large first line pressure just community. Ten church fear chair to decide another. There ready hour phone reduce."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "estimated_time" equals to "1 weeks"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "order_index" equals to "7"
+INFO     SCHEMA_ASSERTIONS:json_schema.py:18 Validating JSON schema

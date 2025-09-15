@@ -1,0 +1,9 @@
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to "200"
+INFO     AUTHENTICATION_ASSERTIONS:courses.py:40 Check update course response
+INFO     BASE_ASSERTIONS:base.py:35 Check that "title" equals to "Board measure hair certain protect."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "max_score" equals to "90"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "min_score" equals to "16"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "description" equals to "Color safe herself central speak. Camera social someone thousand audience table.
+Many prepare wind myself friend product. Defense bill brother. Her wonder wear skin."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "estimated_time" equals to "1 weeks"
+INFO     SCHEMA_ASSERTIONS:json_schema.py:18 Validating JSON schema

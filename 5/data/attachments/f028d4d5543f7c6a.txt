@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDEwOjI1OjU4LjQzOTk2NiIsInVzZXJfaWQiOiIzNjU0ODUzMC1lMjkzLTRmOWUtYWMwNy02MWNmMzg2OTNlODQifQ.APYKQLpMDH9g0-sPH98-8_jLQyjDn1IqJEDiJKfWH-0' \
+  -H 'content-length: 401' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Less serve against despite right side side.","maxScore":52,"minScore":1,"description":"Admit I deal piece page go politics capital. Pass present explain movement.\nEven study wonder scene cause would author. Physical one miss reach. As bar plan heart.","estimatedTime":"8 weeks","previewFileId":"8e66763d-a2d3-4b89-a9af-7d7d07d0328f","createdByUserId":"36548530-e293-4f9e-ac07-61cf38693e84"}'

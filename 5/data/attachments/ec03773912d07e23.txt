@@ -1,0 +1,11 @@
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to "200"
+INFO     AUTHENTICATION_ASSERTIONS:courses.py:21 Check create course response
+INFO     BASE_ASSERTIONS:base.py:35 Check that "title" equals to "Difficult book stop board garden face."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "description" equals to "The during guy. Yard government Mrs view accept author usually everything. Human model spring.
+At chair section American artist trial thousand on. Talk cause expect green."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "estimated_time" equals to "7 weeks"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "max_score" equals to "75"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "min_score" equals to "4"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "preview_file_id" equals to "16660b38-6b55-4f10-9477-5eb690101cb4"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "created_by_user_id" equals to "acd09a3b-9e74-48c9-a2d4-725f2537b919"
+INFO     SCHEMA_ASSERTIONS:json_schema.py:18 Validating JSON schema

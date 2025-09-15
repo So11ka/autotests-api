@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/aa25e44a-15d5-4090-babb-5269b9b54377' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDEwOjI1OjU5LjczMTIxNCIsInVzZXJfaWQiOiJhNDU2MjljYS1hOTcyLTQwZjctYjI0Zi1mYTZlZTM1ZjJiZmIifQ.U-SAk5jnFDeD70YfPnvOScb-odE5TTbtr_KnM1E1NpA' \
+  -H 'content-length: 261' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Spring worker score put alone.","maxScore":86,"minScore":17,"orderIndex":20,"description":"Improve team suddenly travel between already. Pass after often. Will yes democratic write. Same rather effect him where some staff.","estimatedTime":"10 weeks"}'

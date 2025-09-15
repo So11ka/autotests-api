@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDEwOjI1OjU4LjE2NjMyMyIsInVzZXJfaWQiOiI3ODExOGZjNS1jMGU4LTRlNWMtYmNlYy01NmU4NjQ4ZDkxZTAifQ.8lJK-mqssBxcJ03oNVROcWTY0QVYS0YIMtoSDGiGTAA' \
+  -H 'content-length: 349' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Under speech forget pretty.","maxScore":53,"minScore":15,"description":"Moment bill yet there concern throughout. Decision site forward father understand. Person term role. Student science bag space.","estimatedTime":"3 weeks","previewFileId":"02a0689a-6904-4385-a06a-ab1099bb4409","createdByUserId":"78118fc5-c0e8-4e5c-bcec-56e8648d91e0"}'

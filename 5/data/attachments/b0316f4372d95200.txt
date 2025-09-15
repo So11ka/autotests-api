@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDEwOjI1OjU5LjEyMzUzOSIsInVzZXJfaWQiOiIxZDczN2FjMC1iYzcwLTQ2MDctYWVhNy1iM2FlMjg3NTM5MDQifQ.MRcMyWeTuEmMSDIRn4YpoMXFPZadb8PW0jyQ4i5CwbQ' \
+  -H 'content-length: 418' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Activity already doctor impact.","maxScore":69,"minScore":30,"description":"Certain not none analysis after true line. Relationship dream support simple rate discussion art hard.\nThan spring those only popular room war. Buy although life city case pretty experience.","estimatedTime":"10 weeks","previewFileId":"543f27d7-8cb8-4230-a214-21611c79d345","createdByUserId":"1d737ac0-bc70-4607-aea7-b3ae28753904"}'

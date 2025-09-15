@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/f31575af-5313-49de-a589-7f65f37262d0' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDEwOjI1OjU3LjI2MDMyMSIsInVzZXJfaWQiOiIxZDI2MjMzYS1mZmMxLTQ4Y2YtYmJkZS1kMzE1NDRjZmMyMjkifQ.Yz75SI-PEp_yADfQcclkHwaCCQJlMMMv0Htk_L9xyRY' \
+  -H 'content-length: 284' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Board measure hair certain protect.","maxScore":90,"minScore":16,"description":"Color safe herself central speak. Camera social someone thousand audience table.\nMany prepare wind myself friend product. Defense bill brother. Her wonder wear skin.","estimatedTime":"1 weeks"}'

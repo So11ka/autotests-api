@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDEwOjI1OjU1Ljg0ODE1NCIsInVzZXJfaWQiOiJjMWI5NGYzYy05ZmZkLTQ5YTgtODA4ZS1hZDQxNjVlNGY5MDMifQ.gzWaTe9zUzt9nCvJBA71e-PuFhEIbaexXgYuSN2Smc8' \
+  -H 'content-length: 298' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Car born line.","maxScore":93,"minScore":21,"description":"Long style natural. Fill outside produce break. Set conference free manage appear eight.","estimatedTime":"10 weeks","previewFileId":"836041bc-e7ba-4e37-b460-ac384500aa26","createdByUserId":"c1b94f3c-9ffd-49a8-808e-ad4165e4f903"}'

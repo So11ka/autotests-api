@@ -1,0 +1,11 @@
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to "200"
+INFO     EXERCISES_ASSERTIONS:exercises.py:20 Check create exercise response
+INFO     BASE_ASSERTIONS:base.py:35 Check that "title" equals to "Model a than have past place."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "course_id" equals to "a4ad36ef-e9aa-4162-a1bd-34544a3c3d10"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "max_score" equals to "93"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "min_score" equals to "8"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "description" equals to "Will particularly country though because huge money call. Your two air live.
+History sing or expect four and suffer. Table face build choice."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "estimated_time" equals to "5 weeks"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "order_index" equals to "7"
+INFO     SCHEMA_ASSERTIONS:json_schema.py:18 Validating JSON schema

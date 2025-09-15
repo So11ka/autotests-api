@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDEwOjI1OjU2Ljk4NTU4MCIsInVzZXJfaWQiOiJhY2QwOWEzYi05ZTc0LTQ4YzktYTJkNC03MjVmMjUzN2I5MTkifQ.1tWwlA_WK1y2-3aF9OkZOWSRFekxgl_OfMD6ZtVjLA8' \
+  -H 'content-length: 404' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Difficult book stop board garden face.","maxScore":75,"minScore":4,"description":"The during guy. Yard government Mrs view accept author usually everything. Human model spring.\nAt chair section American artist trial thousand on. Talk cause expect green.","estimatedTime":"7 weeks","previewFileId":"16660b38-6b55-4f10-9477-5eb690101cb4","createdByUserId":"acd09a3b-9e74-48c9-a2d4-725f2537b919"}'

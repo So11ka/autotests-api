@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDEwOjI2OjAwLjM4Njk3MCIsInVzZXJfaWQiOiI3NWM5ZjNlNS1kOGE3LTRiZmItYmUxNy01Nzk1OWNkN2RmMWIifQ.KI-zUlzkKGJUq4CsyhW1jTQNH7-MgeeWyMIT520kP24' \
+  -H 'content-length: 325' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Simple eight sense not Mrs.","maxScore":58,"minScore":23,"description":"Degree morning crime four decide cover service.\nWorld tend reach line prove into. Group toward I news.","estimatedTime":"7 weeks","previewFileId":"fc9bc3e1-ad33-4de3-8768-022911d09444","createdByUserId":"75c9f3e5-d8a7-4bfb-be17-57959cd7df1b"}'

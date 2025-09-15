@@ -1,0 +1,12 @@
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to "200"
+INFO     EXERCISES_ASSERTIONS:exercises.py:58 Check get exercise response
+INFO     EXERCISES_ASSERTIONS:exercises.py:39 Check exercise
+INFO     BASE_ASSERTIONS:base.py:35 Check that "title" equals to "Peace future name business name yet war."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "course_id" equals to "95495412-75c8-4003-bbd2-5cb4cdfa4005"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "max_score" equals to "62"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "min_score" equals to "24"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "description" equals to "Suggest choose population plant. Strategy final result whatever feeling decision set. From month go house.
+Serious eat rise into. Strategy main type stop process hour anything region."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "estimated_time" equals to "1 weeks"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "order_index" equals to "96"
+INFO     SCHEMA_ASSERTIONS:json_schema.py:18 Validating JSON schema

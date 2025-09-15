@@ -1,0 +1,22 @@
+INFO     BASE_ASSERTIONS:base.py:17 Check that response status code equals to "200"
+INFO     AUTHENTICATION_ASSERTIONS:courses.py:68 Check get courses response
+INFO     BASE_ASSERTIONS:base.py:62 Check that length of "courses" equals to "1" length
+INFO     AUTHENTICATION_ASSERTIONS:courses.py:54 Check course
+INFO     BASE_ASSERTIONS:base.py:35 Check that "id" equals to "63ac9756-3fd7-4003-a8b4-33b8f805fe31"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "title" equals to "Car born line."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "description" equals to "Long style natural. Fill outside produce break. Set conference free manage appear eight."
+INFO     BASE_ASSERTIONS:base.py:35 Check that "estimated_time" equals to "10 weeks"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "max_score" equals to "93"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "min_score" equals to "21"
+INFO     USERS_ASSERTIONS:users.py:20 Check user
+INFO     BASE_ASSERTIONS:base.py:35 Check that "id" equals to "c1b94f3c-9ffd-49a8-808e-ad4165e4f903"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "email" equals to "jaimethompson@example.com"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "first_name" equals to "Matthew"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "middle_name" equals to "Jorge"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "last_name" equals to "Gray"
+INFO     FILES_ASSERTIONS:files.py:24 Checking file
+INFO     BASE_ASSERTIONS:base.py:35 Check that "id" equals to "836041bc-e7ba-4e37-b460-ac384500aa26"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "url" equals to "http://localhost:8000/static/tests/765cf8e4-370f-4c6a-9f94-5669c42f7765.png"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "filename" equals to "765cf8e4-370f-4c6a-9f94-5669c42f7765.png"
+INFO     BASE_ASSERTIONS:base.py:35 Check that "directory" equals to "tests"
+INFO     SCHEMA_ASSERTIONS:json_schema.py:18 Validating JSON schema
