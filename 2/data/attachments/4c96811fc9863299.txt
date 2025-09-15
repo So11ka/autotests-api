@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjI0OjA1LjQwNzk5NyIsInVzZXJfaWQiOiI2OWFkOTJmOC1jOWQzLTQ0NTctOTU2Yy0yZjU2Nzg5YjcwOWUifQ.3aVWJ3sLX3jFpnBkXrwJFgoHPxNqaVpyb6BGrAFshEg' \
+  -H 'content-length: 410' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Final wrong water science partner throughout thus.","max_score":75,"min_score":2,"description":"Seven development meet throughout. Reach stay bad according today.\nRule year tend bag lay affect represent open. Across growth center allow enjoy once total.","estimated_time":"7 weeks","preview_file_id":"eb3fe4a9-f5e2-48e1-a305-de17a9e48150","created_by_user_id":"69ad92f8-c9d3-4457-956c-2f56789b709e"}'

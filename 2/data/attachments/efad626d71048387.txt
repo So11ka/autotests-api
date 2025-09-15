@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjI0OjA2LjU0NzQzMiIsInVzZXJfaWQiOiJkYjgyZWQ4ZS1mMGVkLTRjMDktOGJlYy1iNGNjOTQ1OTA4MjkifQ._GezN_mZPrDjFAAjjjfsoupQb4xl67HSY87C_q4DYds' \
+  -H 'content-length: 413' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Claim long produce vote.","max_score":78,"min_score":22,"description":"Beyond always indicate remain. Democratic question skin. Official treatment front paper.\nStock television do product. Yes tax another onto sense. Spring individual performance consumer.","estimated_time":"9 weeks","preview_file_id":"8fdf4216-1042-4e0f-b250-f44c512b7b78","created_by_user_id":"db82ed8e-f0ed-4c09-8bec-b4cc94590829"}'

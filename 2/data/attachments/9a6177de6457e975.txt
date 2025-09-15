@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjI0OjA4LjA0NTU0NiIsInVzZXJfaWQiOiI0NDZjMTE5ZS0yMTNhLTQwOGYtYjA5MS0yNWI0ZDNlYjMzZjUifQ.x3-7gRISzyKHHP9wbPuRqWWFyoiBi927IxnW0cx3ceI' \
+  -H 'content-length: 326' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Evidence impact understand their.","max_score":77,"min_score":7,"description":"Thought myself reflect return. Far learn rest. Through less how later too source they open.","estimated_time":"2 weeks","preview_file_id":"a9c89954-dca5-44cc-b333-d6a475c1f4d3","created_by_user_id":"446c119e-213a-408f-b091-25b4d3eb33f5"}'

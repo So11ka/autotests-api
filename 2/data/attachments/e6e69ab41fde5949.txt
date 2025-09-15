@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjI0OjA2LjgyMjEwMyIsInVzZXJfaWQiOiI1OGY3OTliZS1hMjA3LTQwZWEtYmU0My1kODg4MjIwNjlhZjIifQ.4VHmwYQyNtYhGXRHGVTQQ09hcTUkRvvx6GD_yUvGPkU' \
+  -H 'content-length: 374' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Doctor bag oil book.","max_score":63,"min_score":11,"description":"Buy relationship people leg physical. Direction especially risk which.\nPrevent music firm society. Bill bit summer financial other question well tell.","estimated_time":"3 weeks","preview_file_id":"a4d2e77b-9900-4667-b08b-855753668266","created_by_user_id":"58f799be-a207-40ea-be43-d88822069af2"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjI0OjA5LjIwNzM0NSIsInVzZXJfaWQiOiIzY2NlZjcwNC02NTZhLTQ2M2ItOWM0Mi0yNDA2MWViNDQxM2QifQ.6p6qn-6sQJY83pL2HL-51wQU0ofRn_p4TjLtMPLaTFE' \
+  -H 'content-length: 369' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Perhaps very away.","max_score":80,"min_score":16,"description":"Drop white character we our must cup skin. Television piece what something hot sister think fly. Less election campaign interest. Expect total firm.","estimated_time":"6 weeks","preview_file_id":"f5af5dd6-d999-4bfb-a7a8-66d585093b29","created_by_user_id":"3ccef704-656a-463b-9c42-24061eb4413d"}'

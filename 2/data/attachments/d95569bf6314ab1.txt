@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjI0OjA4LjkzNDcyOSIsInVzZXJfaWQiOiJjYjYxNzdiZi03MjI1LTQzMWEtYjVhYS0xNGYyZTdlNzdmNTkifQ.P7SWJmm1usfoF86pC4VNcLjLhR2DCaE_-jWNEw18oxc' \
+  -H 'content-length: 373' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ready increase need deep mouth team check.","max_score":90,"min_score":6,"description":"Their later beyond unit radio room note. Success rich agency truth leave born idea sure.\nBecome gun start fear break particular.","estimated_time":"5 weeks","preview_file_id":"e5b25ddf-82d6-4d2f-812c-b49458a38a4a","created_by_user_id":"cb6177bf-7225-431a-b5aa-14f2e7e77f59"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA5LTE1VDA4OjI0OjEwLjA5NjQ4MiIsInVzZXJfaWQiOiI2MzNjZjdhOS0zOWU1LTQ3ZmUtYmM3NS1iMzAwYTU4MDI0ZjcifQ.anzw-g_Z-pn5rxlulrddk0eRoazmLmUtl8o5Nyj0VhE' \
+  -H 'content-length: 451' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Production situation so listen article tax charge.","max_score":79,"min_score":23,"description":"Agreement suffer town increase issue item. Enjoy say memory recently. Already quite argue. Image will message land.\nAll nearly bank money. Machine all your. Scientist personal entire professor one.","estimated_time":"8 weeks","preview_file_id":"8f4ae390-877d-4cfa-8084-7fea0d3cb4b3","created_by_user_id":"633cf7a9-39e5-47fe-bc75-b300a58024f7"}'
